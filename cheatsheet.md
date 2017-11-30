@@ -108,5 +108,37 @@ const int pathwidth = 100;
 7 == 2 + 5 ? 4 : 3; // returns 4
 ```
 
+## I/O standard library
+### Standard Output
+C++では, 標準出力にアクセスするための変数は`cout`で与えられる.
+`cout`は普通`<<`(挿入演算子)と一緒に利用される.
+
+また, 1行に複数回`<<`を利用することもできる.
+
+```cpp
+cout << 3193 // prints number 120 on screen
+cout << "moriaki" << 3193
+```
+
+`cout`は自動的に改行を挟んでくれない. 明示的に改行コード`\n`を末尾に付与するか, 
+`endl`(manipulator)を挿入する必要がある.
+
+### Standard Input
+`cin` manipulatorを利用すれば良い.
+`cout`とは対照的に, `>>`(抽出演算子)と一緒に利用される.
+
+```cpp
+int age;
+cin >> age; // ←なんか変な書き方だ
+```
+
+### sstream header file
+文字ではなく文字列を標準入力から受け取りたい場合に利用する.
+
+### 行全体を入力として受け取りたい
+`getline`関数を利用しよう. `cin`を通じて行を受け取ることができる.
+
+`getline(cin, mystr) // mystrはstring型`というように利用することができる.
+
 ## memo
 + オブジェクトファイル
